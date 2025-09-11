@@ -14,6 +14,14 @@ public class DiakokApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Diákok");
         //stage.setIconified(true);
+
+        // beolvasás
+        try {
+            DiakokController.loadFile("diakok.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         stage.setScene(scene);
         stage.show();
     }

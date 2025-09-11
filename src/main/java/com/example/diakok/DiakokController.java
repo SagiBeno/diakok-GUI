@@ -15,14 +15,17 @@ import java.util.Scanner;
 
 public class DiakokController implements Initializable {
     public static List<String> filelines;
+    public static List<Diak> diakok;
 
     public static void loadFile(String filename) throws IOException {
-
+        diakok = new ArrayList<>();
         filelines = new ArrayList<>();
         Scanner scanner = new Scanner(new File(filename), StandardCharsets.UTF_8);
         while(scanner.hasNextLine()) {
             String fileLine = scanner.nextLine();
             filelines.add(fileLine);
+            System.out.println(fileLine);
+            diakok.add(new Diak(fileLine));
         }
         scanner.close();
     }

@@ -50,7 +50,7 @@
          <children>
             <VBox alignment="TOP_RIGHT" prefHeight="398.0" prefWidth="415.0">
                <children>
-                  <ListView prefHeight="339.0" prefWidth="372.0">
+                  <ListView id="listview_Filtered" fx:id="listview_Filtered" prefHeight="339.0" prefWidth="372.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

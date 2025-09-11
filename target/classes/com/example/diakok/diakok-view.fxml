@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.3010033444816054" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.3010033444816054" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="800.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.diakok.DiakokController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="175.0">
          <children>
@@ -19,7 +19,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="Mindenki">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#onMindenkiButtonClick" text="Mindenki">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -50,7 +50,7 @@
          <children>
             <VBox alignment="TOP_RIGHT" prefHeight="398.0" prefWidth="415.0">
                <children>
-                  <ListView prefHeight="339.0" prefWidth="372.0">
+                  <ListView id="listview_Filtered" fx:id="listview_Filtered" prefHeight="339.0" prefWidth="372.0">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

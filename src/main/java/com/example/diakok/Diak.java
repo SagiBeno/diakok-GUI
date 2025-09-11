@@ -40,11 +40,11 @@ public class Diak {
     public String toString() {
         return
                 vnev +
-                " knev='" + knev +
+                " " + knev +
                 ", " + neme +
                 ", " + osztaly +
                 " (" + lakhely + " " + datum +
                 ", " + magassag +
-                " cm')";
+                " cm)";
     }
 }

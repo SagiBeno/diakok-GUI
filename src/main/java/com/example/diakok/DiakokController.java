@@ -1,5 +1,7 @@
 package com.example.diakok;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -31,6 +33,16 @@ public class DiakokController implements Initializable {
             diakok.add(new Diak(fileLine));
         }
         scanner.close();
+    }
+
+    @FXML
+    protected void onMindenkiButtonClick() {
+        List<String> diakokLinesList = new ArrayList<>();
+        for (Diak diak: diakok) {
+            diakokLinesList.add(diak.toString());
+        }
+        ObservableList<String> diakokOList = FXCollections.observableList(diakokLinesList);
+        listview_Filtered.setItems(diakokOList);
     }
 
     @Override

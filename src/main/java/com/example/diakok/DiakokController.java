@@ -11,10 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.Scanner;
+import java.util.*;
 
 public class DiakokController implements Initializable {
     @FXML public ListView<String> listview_Filtered;
@@ -29,7 +26,7 @@ public class DiakokController implements Initializable {
         while(scanner.hasNextLine()) {
             String fileLine = scanner.nextLine();
             filelines.add(fileLine);
-            System.out.println(fileLine);
+            // System.out.println(fileLine);
             diakok.add(new Diak(fileLine));
         }
         scanner.close();
@@ -40,6 +37,54 @@ public class DiakokController implements Initializable {
         List<String> diakokLinesList = new ArrayList<>();
         for (Diak diak: diakok) {
             diakokLinesList.add(diak.toString());
+        }
+        ObservableList<String> diakokOList = FXCollections.observableList(diakokLinesList);
+        listview_Filtered.setItems(diakokOList);
+    }
+
+    @FXML
+    protected void onSandorButtonClick() {
+        List<String> diakokLinesList = new ArrayList<>();
+        for (Diak diak: diakok) {
+            if (Objects.equals(diak.knev, "Sándor")) {
+                diakokLinesList.add(diak.toString());
+            }
+        }
+        ObservableList<String> diakokOList = FXCollections.observableList(diakokLinesList);
+        listview_Filtered.setItems(diakokOList);
+    }
+
+    @FXML
+    protected void onKecskemetiButtonClick() {
+        List<String> diakokLinesList = new ArrayList<>();
+        for (Diak diak: diakok) {
+            if (Objects.equals(diak.lakhely, "Kecskemét")) {
+                diakokLinesList.add(diak.toString());
+            }
+        }
+        ObservableList<String> diakokOList = FXCollections.observableList(diakokLinesList);
+        listview_Filtered.setItems(diakokOList);
+    }
+
+    @FXML
+    protected void on1996ButtonClick() {
+        List<String> diakokLinesList = new ArrayList<>();
+        for (Diak diak: diakok) {
+            if (diak.datum.getYear() == 1996) {
+                diakokLinesList.add(diak.toString());
+            }
+        }
+        ObservableList<String> diakokOList = FXCollections.observableList(diakokLinesList);
+        listview_Filtered.setItems(diakokOList);
+    }
+
+    @FXML
+    protected void on10AButtonClick() {
+        List<String> diakokLinesList = new ArrayList<>();
+        for (Diak diak: diakok) {
+            if (Objects.equals(diak.osztaly, "10/A")) {
+                diakokLinesList.add(diak.toString());
+            }
         }
         ObservableList<String> diakokOList = FXCollections.observableList(diakokLinesList);
         listview_Filtered.setItems(diakokOList);

@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.3010033444816054" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="800.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.diakok.DiakokController">
+<SplitPane dividerPositions="0.3010033444816054" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.diakok.DiakokController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="175.0">
          <children>
@@ -24,22 +24,22 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="Sándorok">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#onSandorButtonClick" text="Sándorok">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="Kecskeméti">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#onKecskemetiButtonClick" text="Kecskeméti">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="10/A">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#on1996ButtonClick" text="1996">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="Button">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#on10AButtonClick" text="10/A">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>

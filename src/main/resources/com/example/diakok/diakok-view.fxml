@@ -24,22 +24,22 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="Sándorok">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#onSandorButtonClick" text="Sándorok">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="Kecskeméti">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#onKecskemetiButtonClick" text="Kecskeméti">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="10/A">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#on1996ButtonClick" text="1996">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button minWidth="150.0" mnemonicParsing="false" text="Button">
+                  <Button minWidth="150.0" mnemonicParsing="false" onAction="#on10AButtonClick" text="10/A">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>

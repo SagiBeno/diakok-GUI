@@ -4,13 +4,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class DiakokController implements Initializable {
@@ -90,6 +94,21 @@ public class DiakokController implements Initializable {
         listview_Filtered.setItems(diakokOList);
     }
 
+    @FXML
+    protected void onSaveDataButtonClick() {
+        Path path = Paths.get("adatok.txt");
+
+        try (BufferedWriter w = Files.newBufferedWriter(path, StandardCharsets.UTF_8,
+                StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)) {
+
+            for (String d : listview_Filtered.getItems()) {
+                w.write(d);
+                w.newLine();
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
